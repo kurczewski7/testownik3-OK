@@ -83,7 +83,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                 Setup.animationEnded = true
                 self.gestures.disabledOtherGestures = false
                 sender.view?.removeFromSuperview()
-                print("TO JUZ JEST PRAWIE KONIEC")
+                print("TO JUZ JEST  KONIEC")
                 //Setup.setTextColor(forToastType: .toast, backgroundColor: UIColor.brown)
             })
         }
