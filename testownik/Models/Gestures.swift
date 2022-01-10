@@ -54,7 +54,7 @@ class Gestures {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tapAction))
         gesture.numberOfTouchesRequired = touchNumber
         addOneGesture(gesture, forView: aView)
-        print("EEEE:  UITapGestureRecognizer:\(aView?.tag)")
+        print("EEEE:  UITapGestureRecognizer:\(aView?.tag ?? 0)")
     }
      func addSwipeGestureToView(direction: UISwipeGestureRecognizer.Direction, forView aView: UIView? = nil) {
         let gesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction))

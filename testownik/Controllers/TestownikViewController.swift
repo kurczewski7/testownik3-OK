@@ -87,7 +87,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                 //Setup.setTextColor(forToastType: .toast, backgroundColor: UIColor.brown)
             })
         }
-        print("tapRefreshUI NOWY zz:\(sender.view?.tag)")
+        print("tapRefreshUI NOWY zz:\(sender.view?.tag ?? 0)")
     }
     func pinchRefreshUI(sender: UIPinchGestureRecognizer) {
         print("Pinch touches:\(sender.numberOfTouches),\(sender.scale) ")
@@ -115,7 +115,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             }
             //buttons[nr].titleLabel?.scrollLeft()
         }
-        print("longPressRefreshUI End:\(sender.view?.tag),")
+        print("longPressRefreshUI End:\(sender.view?.tag ?? 0),")
     }
     //==================
     func forcePressRefreshUI(sender: ForcePressGestureRecognizer) {
@@ -126,7 +126,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         
         
         gestures.addTapGestureToView(forView: label, touchNumber: 1)
-        print("forcePressRefreshUI,\(sender.numberOfTouches),\(sender.view?.tag)")
+        print("forcePressRefreshUI,\(sender.numberOfTouches),\(sender.view?.tag ?? 0)")
     }
     func swipeRefreshUI(direction: UISwipeGestureRecognizer.Direction) {
         print("=====\nA currentTest: \(testownik.currentTest)")
@@ -204,7 +204,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         print("COMMAND executeCommand:\(cmd.rawValue):\(command.vocabularyEn[cmd.rawValue][0])")
         print("stackView.arrangedSubviews.coun:\(stackView.arrangedSubviews.count)")
     
-        print("One:\((stackView.arrangedSubviews[0] as! UIButton).titleLabel?.text)")
+        print("One:\(String(describing: (stackView.arrangedSubviews[0] as! UIButton).titleLabel?.text))")
         switch cmd {
             case .start:        firstButtonPress(UIButton())
             case .previous:     previousButtonPress(UIButton())
@@ -377,7 +377,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         print("viewWillAppear viewWillAppear")
         Settings.shared.readCurrentLanguae()
         
-        print("Test name 3:\(database.selectedTestTable[0]?.toAllRelationship?.user_name)")
+        print("Test name 3:\(database.selectedTestTable[0]?.toAllRelationship?.user_name ?? "brak")")
         print("Testownik count: \(testownik.count)")
 //        if database.testToUpgrade {
             print("testToUpgrade NOW")

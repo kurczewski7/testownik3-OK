@@ -125,7 +125,7 @@ class Ratings {
         for el in self.testList {
             print("el:\(el)")
             let bb = find(testForValue: el)
-            print("bb:\(bb?.fileNumber ?? 0),\(bb?.lastAnswer)")
+            print("bb:\(bb?.fileNumber ?? 0),\(bb?.lastAnswer ?? false)")
         }
     }
     func printf() {

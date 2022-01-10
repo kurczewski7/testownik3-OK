@@ -25,7 +25,7 @@ let speech = Speech()
         let rr = ratings[2]
         rr?.correctionsToDo = 1963
         
-        print("rr:\(rr)")
+        print("rr:\(String(describing: rr))")
         ratings.printf()
         ratings[1] = rr
         ratings[2] = rr
@@ -62,8 +62,8 @@ let speech = Speech()
         
         Locale.autoupdatingCurrent.languageCode
         print("App languae, Locale.autoupdatingCurrent.languageCode: \(Locale.autoupdatingCurrent.languageCode ?? "brak")")
-        print("Settins dev, Locale.current:\(Locale.current.languageCode)")
-        print("(Bundle.main.preferredLocalizations: \(Bundle.main.preferredLocalizations.first)")
+        print("Settins dev, Locale.current:\(Locale.current.languageCode ?? "brak")")
+        print("(Bundle.main.preferredLocalizations: \(String(describing: Bundle.main.preferredLocalizations.first))")
         print("Locale.current.identifier: \(Locale.current.identifier)")
        
         
@@ -95,10 +95,10 @@ let speech = Speech()
         print("allTestsTable.count:\(database.allTestsTable.count)\n")
         print("selectedTestTable.count:\(database.selectedTestTable.count)\n")
         print("testDescriptionTable.count:\(database.testDescriptionTable.count)\n")
-        print("Test name:\(database.selectedTestTable[0]?.toAllRelationship?.user_name)")
+        print("Test name:\(database.selectedTestTable[0]?.toAllRelationship?.user_name ?? "brak")")
         
         
-        print("rr2:\(ratings[2]?.fileNumber),\(ratings[2]?.correctionsToDo)")
+        print("rr2:\(ratings[2]?.fileNumber ?? 0),\(ratings[2]?.correctionsToDo ?? 0)")
         ratings.printf()
         ratings.saveRatings()
         ratings.saveTestList()
