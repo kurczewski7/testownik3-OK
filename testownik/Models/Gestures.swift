@@ -164,7 +164,7 @@ class Gestures {
          }
      }
      @objc func  forcePressAction(sender: ForcePressGestureRecognizer) {
-         if let tag = sender.view?.tag ,  !self.disabledOtherGestures {
+         if let _ = sender.view?.tag ,  !self.disabledOtherGestures {
              delegate?.forcePressRefreshUI(sender: sender)
          }
      }

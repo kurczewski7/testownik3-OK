@@ -132,7 +132,7 @@ class Command {
                 }
             }
         }
-        if let cmd = returnVal {
+        if let _ = returnVal {
             //delegate?.executeCommand(forCommand: cmd)
             delegate?.executeCommand(forCommand: .five)
         }

@@ -121,7 +121,7 @@ class Settings {
     func yyyy() {
         //var appDefault: NSDictionary = NSDictionary.decodeDictionaryWithKeys(of: AnyClass, objectsOf: AnyObject, forKey: "you_key")
         let appDefault: Dictionary = NSDictionary.dictionaryWithValues(forKeys: ["you_key"])
-        UserDefaults.standard.register(defaults: appDefault )
+      UserDefaults.standard.register(defaults: appDefault )
         UserDefaults.standard.synchronize()
         
         UserDefaults.standard.integer(forKey: "you_key")
