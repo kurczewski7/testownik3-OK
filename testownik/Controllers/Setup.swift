@@ -27,7 +27,7 @@ class Setup {
         case popUpBlink  = 3
     }
     // MARK: variables
-    private static let backgroundColorsDefault: [UIColor] = [.systemYellow.withAlphaComponent(0.6), .lightGray, .systemBlue, .systemGreen]
+    private static let backgroundColorsDefault: [UIColor] = [UIColor.systemYellow.withAlphaComponent(0.6), UIColor.lightGray, UIColor.systemBlue, UIColor.systemGreen]
     private static let textColorsDefault: [UIColor] = [.white, .white, .white, .black]
     private static var backgroundColorList =  backgroundColorsDefault
     private static var textColorList = textColorsDefault
